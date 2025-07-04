@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card mt-4">
+    <div class="card-body">
+        <h1 class="card-title">Auth Test</h1>
+        <p class="card-text">Добро пожаловать!</p>
+        <p class="card-text">Главная страница вашего Django-проекта.</p>
+
+        {% if not user.is_authenticated %}
+        <div class="mt-3">
+            <a href="{% url 'login' %}" class="btn btn-primary">Войти в систему</a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

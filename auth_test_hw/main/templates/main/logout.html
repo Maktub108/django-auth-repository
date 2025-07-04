@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h4 class="card-title mb-4">Вы вышли из системы</h4>
+                    <p class="mb-4">Вы можете снова войти или вернуться на главную страницу.</p>
+
+                    <div class="d-grid gap-3">
+                        <a href="{% url 'login' %}" class="btn btn-primary">
+                            Войти снова
+                        </a>
+                        <a href="{% url 'index' %}" class="btn btn-outline-secondary">
+                            На главную
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
